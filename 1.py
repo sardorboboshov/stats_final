@@ -20,6 +20,10 @@ def common_variance_squared(sx,n,sy,m):
 def sqrt_pool(n,m):
     return (1/n + 1/m) ** 0.5
 def t_statistic_pool(xbar,ybar, d, sx,n,sy,m):
-    return (xbar-ybar -d) / sqrt_pool(n,m)*common_variance_squared(sx,n,sy,m)**0.5
+    return (xbar-ybar -d) / (sqrt_pool(n,m)*common_variance_squared(sx,n,sy,m)**0.5)
 
-print(common_variance_squared(0.00128,13,0.00096,15))
+# print(common_variance_squared(0.00128,13,0.00096,15))
+
+# print(degree(1.31,8,1.72 ,10))
+# print(common_variance_squared(4.3,14,5.23,14))
+print(t_statistic_pool(35.45,41.35,0,4.3,14,5.23,14))
